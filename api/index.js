@@ -1,6 +1,11 @@
 import express from "express";
 import dotenv from "dotenv"
-import mongoose, { mongo } from "mongoose"
+import mongoose from "mongoose"
+import authRoute from "./routes/auth.js"
+import usersRoute from "./routes/users.js"
+import hotelsRoute from "./routes/hotels.js"
+import roomsRoute from "./routes/rooms.js"
+
 const app = express();
 dotenv.config()
 
@@ -21,6 +26,16 @@ const PORT = process.env.PORT || 3001;
 mongoose.connection.on("disconnected", () => {
     console.log("mongoDB disconnected")
 })
+
+// middlewares
+app.use(express.json());
+
+// whenever there is request for this endpoint, it will use authRoute
+app.use("/api/auth", authRoute);
+// users hotels and rooms
+app.use("/api/users", usersRoute);
+app.use("/api/hotels", hotelsRoute);
+app.use("/api/rooms", roomsRoute);
 
 app.listen(PORT, () => {
     connect()
