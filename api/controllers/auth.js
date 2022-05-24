@@ -14,7 +14,7 @@ export const register = async (req, res, next) => {
     });
 
     await newUser.save();
-    res.status(201).send("User created");
+    res.status(201).send("User created!");
   } catch (err) {
     next(err);
   }
@@ -29,7 +29,7 @@ export const login = async (req, res, next) => {
       req.body.password,
       user.password
     );
-    if (!isPasswordCorrect) return next(createError(404, "Password incorrect"));
+    if (!isPasswordCorrect) return next(createError(404, "Password incorrect!"));
 
     const token = jwt.sign(
       { id: user.id, isAdmin: user.isAdmin },
