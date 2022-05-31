@@ -1,0 +1,25 @@
+.search-container {
+    padding: 50px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;  
+    flex-wrap: wrap;
+    border: 1px solid rgb(223, 223, 223);
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin: auto 300px;
+    border-radius: 10px;
+    color: #1976d2;
+}
+
+#outlined-search {
+    width: 490px;
+}
+
+.transportation-options {
+    padding-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
