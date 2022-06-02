@@ -37,6 +37,7 @@ const ResponsiveAppBar = () => {
               noWrap
               component="a"
               href="/"
+              className="brandName"
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },

@@ -1,5 +1,6 @@
 .search-container {
     padding: 50px;
+    font-family: 'Nunito', sans-serif !important;
 }
 
 .searchInput {
@@ -21,14 +22,14 @@
 }
 
 .transportation-options {
-    padding-top: 30px;
+    padding: 10px;
     display: flex;
     justify-content: flex-start;
 }
 
 .activity-options {
     margin: 20px auto;
-    color: black;
+    color: #343b53;
     border-bottom: 1px solid rgb(223, 223, 223);
 }
 
