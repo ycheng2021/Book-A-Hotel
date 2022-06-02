@@ -1,3 +1,27 @@
 .css-1t6c9ts {
     justify-content: flex-end;
 }
+
+.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+    background-color: transparent !important;
+    color: black !important;
+}
+
+.css-1q39md6-MuiButtonBase-root-MuiButton-root,
+.css-1e4e1qc-MuiButtonBase-root-MuiButton-root {
+    color: black !important;
+    text-transform: none !important;
+}
+
+.css-103v5ce-MuiTypography-root {
+    align-items: center;
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+.hotel-icon {
+    width: 40px;
+    margin-right: 10px;
+}

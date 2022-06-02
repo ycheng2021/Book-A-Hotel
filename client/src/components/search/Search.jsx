@@ -14,6 +14,15 @@ const Search = () => {
   return (
     <div className="search-container">
       <div className="flex">
+        <div className="activity-options">
+          <button className="activity">Stays</button>
+          <button className="activity">Flights</button>
+          <button className="activity">Cars</button>
+          <button className="activity">Packages</button>
+          <button className="activity">Things to do</button>
+          <button className="activity">Cruises</button>
+        </div>
+        <div className="searchInput">
         <TextField id="outlined-search" label="Going to" type="search" />
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <DateRangePicker
@@ -32,6 +41,7 @@ const Search = () => {
             )}
           />
         </LocalizationProvider>
+        </div>
         <div className="transportation-options">
           <FormControlLabel
             control={<Checkbox defaultChecked />}
