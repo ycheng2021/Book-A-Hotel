@@ -1,0 +1,11 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    color: #343b53;
+}
+
+.home-container {
+    text-align: center;
+}
