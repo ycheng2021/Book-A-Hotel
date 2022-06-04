@@ -6,55 +6,151 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import Box from "@mui/material/Box";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import InputAdornment from "@mui/material/InputAdornment";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import Button from "@mui/material/Button";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
 import "./search.css";
 
-const Search = () => {
-  const [value, setValue] = React.useState([null, null]);
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
 
   return (
-    <div className="search-container">
-      <div className="flex">
-        <div className="activity-options">
-          <button className="activity">Stays</button>
-          <button className="activity">Flights</button>
-          <button className="activity">Cars</button>
-          <button className="activity">Packages</button>
-          <button className="activity">Things to do</button>
-          <button className="activity">Cruises</button>
-        </div>
-        <div className="searchInput">
-        <TextField id="outlined-search" label="Going to" type="search" />
-        <LocalizationProvider dateAdapter={AdapterDateFns}>
-          <DateRangePicker
-            startText="Check-in"
-            endText="Check-out"
-            value={value}
-            onChange={(newValue) => {
-              setValue(newValue);
-            }}
-            renderInput={(startProps, endProps) => (
-              <React.Fragment>
-                <TextField {...startProps} />
-                <Box sx={{ mx: 2 }}> to </Box>
-                <TextField {...endProps} />
-              </React.Fragment>
-            )}
-          />
-        </LocalizationProvider>
-        </div>
-        <div className="transportation-options">
-          <FormControlLabel
-            control={<Checkbox defaultChecked />}
-            label="Add a flight"
-          />
-          <FormControlLabel
-            control={<Checkbox defaultChecked />}
-            label="Add a car"
-          />
-        </div>
-      </div>
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
     </div>
   );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
 };
 
-export default Search;
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
+
+export default function Search() {
+  const [activity, setActivity] = React.useState(0);
+
+  const [date, setDate] = React.useState([null, null]);
+
+  const handleChange = (event, newActivity) => {
+    setActivity(newActivity);
+  };
+
+  return (
+    <div className="activity-container">
+      <Box sx={{ width: "100%" }}>
+        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <Tabs
+            value={activity}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+          >
+            <Tab label="Stays" {...a11yProps(0)} />
+            <Tab label="Flights" {...a11yProps(1)} />
+            <Tab label="Cars" {...a11yProps(2)} />
+            <Tab label="Packages" {...a11yProps(3)} />
+            <Tab label="Things to do" {...a11yProps(4)} />
+            <Tab label="Cruises" {...a11yProps(5)} />
+          </Tabs>
+        </Box>
+        <TabPanel value={activity} index={0}>
+          <div className="flex">
+            <div className="searchInput">
+              <Box sx={{ flexGrow: 1 }}>
+                <Grid container spacing={2}>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      InputProps={{
+                        startAdornment: (
+                          <InputAdornment position="start">
+                            <LocationOnIcon />
+                          </InputAdornment>
+                        ),
+                      }}
+                      id="outlined-search"
+                      placeholder="Going to"
+                      type="search"
+                      style ={{width: '100%'}}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <LocalizationProvider dateAdapter={AdapterDateFns}>
+                      <DateRangePicker
+                        startText="Check-in"
+                        endText="Check-out"
+                        style ={{width: '100%'}}
+                        value={date}
+                        onChange={(newDate) => {
+                          setDate(newDate);
+                        }}
+                        renderInput={(startProps, endProps) => (
+                          <React.Fragment>
+                            <TextField {...startProps} />
+                            <Box sx={{ mx: 2 }}> to </Box>
+                            <TextField {...endProps} />
+                          </React.Fragment>
+                        )}
+                      />
+                    </LocalizationProvider>
+                  </Grid>
+                </Grid>
+              </Box>
+            </div>
+            <div className="transportation-options">
+              <FormControlLabel
+                control={<Checkbox defaultChecked />}
+                label="Add a flight"
+              />
+              <FormControlLabel
+                control={<Checkbox defaultChecked />}
+                label="Add a car"
+              />
+            </div>
+            <div className="search-center">
+              <Button className="search-btn" variant="contained">
+                Search
+              </Button>
+            </div>
+          </div>
+        </TabPanel>
+        <TabPanel value={activity} index={1}>
+          Flights
+        </TabPanel>
+        <TabPanel value={activity} index={2}>
+          Cars
+        </TabPanel>
+        <TabPanel value={activity} index={3}>
+          Packages
+        </TabPanel>
+        <TabPanel value={activity} index={4}>
+          Things to do
+        </TabPanel>
+        <TabPanel value={activity} index={5}>
+          Cruises
+        </TabPanel>
+      </Box>
+    </div>
+  );
+}
