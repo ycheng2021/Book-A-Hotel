@@ -12,6 +12,15 @@ import MenuItem from "@mui/material/MenuItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import Hotel from "../../images/hotel.png";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faHotel } from "@fortawesome/free-solid-svg-icons";
+import { faPlane } from "@fortawesome/free-solid-svg-icons";
+import { faCar } from "@fortawesome/free-solid-svg-icons";
+import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
+import { faTicket } from "@fortawesome/free-solid-svg-icons";
+import { faShip } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import Card from "@mui/material/Card";
 import "./navbar.css";
 
 const pages = ["List your property", "Support", "Trips", "Sign in"];
@@ -26,6 +35,8 @@ const ResponsiveAppBar = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const [openMore, setOpenMore] = useState(false);
 
   return (
     <div className="navbar">
@@ -47,9 +58,55 @@ const ResponsiveAppBar = () => {
                 textDecoration: "none",
               }}
             >
-              <img src= {Hotel} className="hotel-icon" alt="colorful design icon for hotel"></img>
+              <img
+                src={Hotel}
+                className="hotel-icon"
+                alt="colorful design icon for hotel"
+              ></img>
               Book-A-Hotel
             </Typography>
+            <div className="moreTravelExpand">
+              <span className="more-btn" onClick={() => setOpenMore(!openMore)}>
+                More travel
+                <FontAwesomeIcon className="downCaret" icon={faAngleDown} />
+              </span>
+              {openMore && (
+                <Card className="options-container" sx={{ width: 250}}>
+                  <div className="logoText">
+                    <div className="horizontal">
+                      <FontAwesomeIcon className="more-icons" icon={faHotel} />
+                      <span>Stays</span>
+                    </div>
+                    <div className="horizontal">
+                      <FontAwesomeIcon className="more-icons" icon={faPlane} />
+                      <span>Flights</span>
+                    </div>
+                    <div className="horizontal">
+                      <FontAwesomeIcon className="more-icons" icon={faCar} />
+                      <span>Cars</span>
+                    </div>
+                    <div className="horizontal">
+                      <FontAwesomeIcon className="more-icons" icon={faBagShopping} />
+                      <span>Packages</span>
+                    </div>
+                    <div className="horizontal">
+                      <FontAwesomeIcon className="more-icons" icon={faTicket} />
+                      <span>Things to do</span>
+                    </div>
+                    <div className="horizontal">
+                      <FontAwesomeIcon className="more-icons" icon={faShip} />
+                      <span>Cruises</span>
+                    </div>
+                    <div className="horizontal">
+                      <span>Deals</span>
+                    </div>
+                    <div className="horizontal">
+                      <span>Groups & meetings</span>
+                    </div>
+                  </div>
+                </Card>
+              )}
+            </div>
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
