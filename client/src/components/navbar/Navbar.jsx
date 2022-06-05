@@ -23,7 +23,7 @@ import { useState } from "react";
 import Card from "@mui/material/Card";
 import "./navbar.css";
 
-const pages = ["List your property", "Support", "Trips", "Sign in"];
+const pages = ["List your property", "Support", "Trips"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -37,6 +37,8 @@ const ResponsiveAppBar = () => {
   };
 
   const [openMore, setOpenMore] = useState(false);
+
+  const [signUp, setSignUp] = useState(false);
 
   return (
     <div className="navbar">
@@ -71,7 +73,7 @@ const ResponsiveAppBar = () => {
                 <FontAwesomeIcon className="downCaret" icon={faAngleDown} />
               </span>
               {openMore && (
-                <Card className="options-container" sx={{ width: 250}}>
+                <Card className="options-container" sx={{ width: 250 }}>
                   <div className="logoText">
                     <div className="horizontal">
                       <FontAwesomeIcon className="more-icons" icon={faHotel} />
@@ -86,7 +88,10 @@ const ResponsiveAppBar = () => {
                       <span>Cars</span>
                     </div>
                     <div className="horizontal">
-                      <FontAwesomeIcon className="more-icons" icon={faBagShopping} />
+                      <FontAwesomeIcon
+                        className="more-icons"
+                        icon={faBagShopping}
+                      />
                       <span>Packages</span>
                     </div>
                     <div className="horizontal">
@@ -179,6 +184,28 @@ const ResponsiveAppBar = () => {
                   {page}
                 </Button>
               ))}
+              <div className="signup-container">
+                <Button
+                  className="signin-button"
+                  key="sign in"
+                  onClick={() => setSignUp(!signUp)}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  Sign in
+                </Button>
+                {signUp && 
+                <Card className="signup-popup" sx={{ width: 350 }}>
+                  <h3>Members can access discounts and special features</h3>
+                  <span>Save 10% or more on thousands of properties with member prices.</span>
+                  <div className="signup-clickable">
+                    <Button className="signin-btn">Sign in</Button>
+                    <Button className="signup-btn">Sign up, it's free</Button>
+                    <span className="signup-hover">List of favorites</span>
+                    <span className="signup-hover">Hotel rewards</span>
+                    <span className="signup-hover">Feedback</span>
+                  </div>
+                </Card>}
+              </div>
             </Box>
           </Toolbar>
         </Container>
