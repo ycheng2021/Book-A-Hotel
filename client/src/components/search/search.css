@@ -1,9 +1,9 @@
 .activity-container {
   border: 1px solid rgb(223, 223, 223);
-  padding: 0 20px;
   border-radius: 10px;
   color: #1976d2;
   margin: 50px auto;
+  width: 100%;
   max-width: 1024px;
 }
 
