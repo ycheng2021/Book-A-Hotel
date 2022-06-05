@@ -3,7 +3,7 @@ import "./list.css";
 const List = () => {
   return (
     <div>
-        <p>List</p>
+        <h1>List</h1>
     </div>
   );
 }

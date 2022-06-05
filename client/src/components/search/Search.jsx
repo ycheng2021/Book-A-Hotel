@@ -14,6 +14,10 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import Card from "@mui/material/Card";
+import { useState } from "react";
 import "./search.css";
 
 function TabPanel(props) {
@@ -29,7 +33,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <Typography component="div">{children}</Typography>
         </Box>
       )}
     </div>
@@ -50,12 +54,28 @@ function a11yProps(index) {
 }
 
 export default function Search() {
-  const [activity, setActivity] = React.useState(0);
+  const [activity, setActivity] = useState(0);
 
-  const [date, setDate] = React.useState([null, null]);
+  const [date, setDate] = useState([null, null]);
 
   const handleChange = (event, newActivity) => {
     setActivity(newActivity);
+  };
+
+  const [openTravel, setOpenTravel] = useState(false);
+
+  const [options, setOptions] = useState({
+    adult: 2,
+    children: 0,
+  });
+
+  const handleOption = (name, operation) => {
+    setOptions((prev) => {
+      return {
+        ...prev,
+        [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
+      };
+    });
   };
 
   return (
@@ -75,8 +95,67 @@ export default function Search() {
             <Tab label="Cruises" {...a11yProps(5)} />
           </Tabs>
         </Box>
-        <TabPanel value={activity} index={0}>
+        <TabPanel component="div" value={activity} index={0}>
           <div className="flex">
+            <div className="size-choice">
+              <span
+                className="travel-btn"
+                onClick={() => setOpenTravel(!openTravel)}
+              >
+                1 room, {options.adult} travelers
+                <FontAwesomeIcon className="downCaret" icon={faAngleDown} />
+              </span>
+              {openTravel && (
+                <Card className="setTravelSize" sx={{ minWidth: 350 }}>
+                  <h4 className="travelers">Travelers</h4>
+                  <h5 className="room">Room 1</h5>
+                  <div className="space-between">
+                    <h5>Adults</h5>
+                    <div className="traveler-counter">
+                      <button 
+                        disabled={options.adult <=1}
+                        className="counterBtn"
+                        onClick={()=> handleOption("adult", "d")}
+                      >-</button>
+                      <span className="guestNum">{options.adult}</span>
+                      <button 
+                        className="counterBtn"
+                        onClick={()=> handleOption("adult", "i")}
+                      >+</button>
+                    </div>
+                  </div>
+                  <div className="space-between">
+                    <div className="left-column">
+                      <h5>
+                        Children <br></br>
+                        <span className="tiny-text">Ages 0 - 17</span>{" "}
+                      </h5>
+                    </div>
+                    <div className="traveler-counter">
+                      <button 
+                        disabled={options.children <=0}
+                        className="counterBtn"
+                        onClick={()=> handleOption("children", "d")}
+                      >-</button>
+                      <span className="guestNum">{options.children}</span>
+                      <button 
+                        className="counterBtn"
+                        onClick={()=> handleOption("children", "i")}
+                      >+</button>
+                    </div>
+                  </div>
+                  <div className="flex-end">
+                    <Button className="addRoomBtn"> Add another room</Button>
+                  </div>
+                  <div className="center">
+                      <Button 
+                        className="doneBtn"
+                        onClick={() => setOpenTravel(!openTravel)}
+                      >Done</Button>      
+                  </div>        
+                </Card>
+              )}
+            </div>
             <div className="searchInput">
               <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2}>
@@ -92,7 +171,7 @@ export default function Search() {
                       id="outlined-search"
                       placeholder="Going to"
                       type="search"
-                      style ={{width: '100%'}}
+                      style={{ width: "100%" }}
                     />
                   </Grid>
                   <Grid item xs={12} md={6}>
@@ -100,7 +179,7 @@ export default function Search() {
                       <DateRangePicker
                         startText="Check-in"
                         endText="Check-out"
-                        style ={{width: '100%'}}
+                        style={{ width: "100%" }}
                         value={date}
                         onChange={(newDate) => {
                           setDate(newDate);

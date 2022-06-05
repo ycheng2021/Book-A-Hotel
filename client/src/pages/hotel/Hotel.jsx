@@ -3,7 +3,7 @@ import "./hotel.css";
 const Hotel = () => {
   return (
     <div>
-        <p>Hotel</p>
+        <h1>Hotel</h1>
     </div>
   );
 }

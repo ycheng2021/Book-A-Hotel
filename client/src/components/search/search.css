@@ -1,58 +1,154 @@
 .activity-container {
-    border: 1px solid rgb(223, 223, 223);
-    padding: 0 20px;
-    border-radius: 10px;
-    color: #1976d2;
-    margin: 100px auto;
-    max-width: 1024px;
+  border: 1px solid rgb(223, 223, 223);
+  padding: 0 20px;
+  border-radius: 10px;
+  color: #1976d2;
+  margin: 100px auto;
+  max-width: 1024px;
 }
 
 .searchInput {
-    margin: 0 12px;
+  margin: 0 12px;
 }
 
 .css-heg063-MuiTabs-flexContainer {
-    justify-content: center;
+  justify-content: center;
 }
 
 .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
-    text-transform: none !important;
-    font-weight: 600 !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
 }
 
 .search-container {
-    padding: 5%;
-    font-family: 'Nunito', sans-serif !important;
+  padding: 5%;
+  font-family: "Nunito", sans-serif !important;
 }
 
 .transportation-options {
-    padding: 10px;
-    display: flex;
+  padding: 10px;
+  display: flex;
 }
 
 .activity-options {
-    margin: 20px auto;
-    color: #343b53;
-    border-bottom: 1px solid rgb(223, 223, 223);
+  margin: 20px auto;
+  color: #343b53;
+  border-bottom: 1px solid rgb(223, 223, 223);
 }
 
 .activity {
-    margin: 10px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+  margin: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 .form-control {
-    border: 1px solid rgb(223, 223, 223);
-    border-radius: 3px;
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 3px;
 }
 
 .search-center {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
 }
 
 .search-btn {
-    text-transform: none !important;
+  text-transform: none !important;
+}
+
+.travel-btn {
+  color: #1976d2;
+  margin: 20px 12px;
+  cursor: pointer;
+}
+
+.downCaret {
+  padding-left: 5px;
+}
+
+.size-choice {
+    display: flex; 
+    justify-content: flex-end;
+    position: relative;
+}
+
+.setTravelSize {
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+    text-align: left;
+    padding: 10px;
+    font-family: "Nunito", sans-serif !important;
+    color: #7c7d80 !important;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.tiny-text {
+  font-size: 12px;
+}
+
+.left-column {
+  display: flex;
+  align-items: center;
+}
+
+.travelers {
+  margin: 10px auto;
+  font-size: 20px;
+  color: #343b53;
+}
+
+.room {
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: #525970;
+}
+
+.counterBtn {
+  background-color: transparent !important;
+  border: 1px solid #343b53;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  font-size: 20px;
+  color: #343b53;
+  cursor: pointer;
+}
+
+.guestNum {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.addRoomBtn {
+  text-transform: none !important;
+  color: #1976d2 !important;
+  font-family: "Nunito", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+}
+
+.doneBtn {
+  background-color: #1976d2 !important;
+  color: white !important;
+  width: 100%;
+  height: 45px;
+  margin-top: 30px !important;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
