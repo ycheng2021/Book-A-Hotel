@@ -102,7 +102,7 @@ export default function Search() {
                 className="travel-btn"
                 onClick={() => setOpenTravel(!openTravel)}
               >
-                1 room, 2 travelers{" "}
+                1 room, {options.adult} travelers
                 <FontAwesomeIcon className="downCaret" icon={faAngleDown} />
               </span>
               {openTravel && (
@@ -148,7 +148,10 @@ export default function Search() {
                     <Button className="addRoomBtn"> Add another room</Button>
                   </div>
                   <div className="center">
-                      <Button className="doneBtn">Done</Button>      
+                      <Button 
+                        className="doneBtn"
+                        onClick={() => setOpenTravel(!openTravel)}
+                      >Done</Button>      
                   </div>        
                 </Card>
               )}
