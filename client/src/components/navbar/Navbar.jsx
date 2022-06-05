@@ -193,18 +193,24 @@ const ResponsiveAppBar = () => {
                 >
                   Sign in
                 </Button>
-                {signUp && 
-                <Card className="signup-popup" sx={{ width: 350 }}>
-                  <h3>Members can access discounts and special features</h3>
-                  <span>Save 10% or more on thousands of properties with member prices.</span>
-                  <div className="signup-clickable">
-                    <Button className="signin-btn">Sign in</Button>
-                    <Button className="signup-btn">Sign up, it's free</Button>
-                    <span className="signup-hover">List of favorites</span>
-                    <span className="signup-hover">Hotel rewards</span>
-                    <span className="signup-hover">Feedback</span>
-                  </div>
-                </Card>}
+                {signUp && (
+                  <Card className="signup-card" sx={{ width: 350 }}>
+                    <div className="signup-popup">
+                      <h3>Members can access discounts and special features</h3>
+                      <span>
+                        Save 10% or more on thousands of properties with member
+                        prices.
+                      </span>
+                    </div>
+                    <div className="signup-clickable">
+                      <Button className="signin-btn">Sign in</Button>
+                      <Button className="signup-btn">Sign up, it's free</Button>
+                      <span className="signup-hover">List of favorites</span>
+                      <span className="signup-hover">Hotel rewards</span>
+                      <span className="signup-hover feedback">Feedback</span>
+                    </div>
+                  </Card>
+                )}
               </div>
             </Box>
           </Toolbar>

@@ -66,20 +66,21 @@
     position: relative;
 }
 
-.signup-popup {
+.signup-card {
     position: absolute;
     top: 55px;
     right: 0;
     z-index: 2;
-    padding: 10px 20px;
     color: #343b53 !important;
+}
+
+.signup-popup {
+    padding: 10px 20px;
 }
 
 .signup-clickable {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin: 20px 0;
 }
 
 .signin-btn {
@@ -88,6 +89,7 @@
     text-transform: none !important;
     font-family: 'Nunito', sans-serif !important;
     font-size: 16px !important;
+    margin: 10px 20px 0 !important;
 }
 
 .signup-btn {
@@ -96,6 +98,19 @@
     color: #1976d2 !important;
     font-family: 'Nunito', sans-serif !important;
     font-size: 16px !important;
+    margin: 10px 20px 0 !important;
+}
+
+.signup-hover {
+    width: 100%;
+    cursor: pointer;
+    height: 35px;
+    padding: 10px 20px 0;
+}
+
+.feedback {
+    border-top: 1px solid rgb(196, 196, 216);
+    padding-top: 10px;
 }
 
 /* hovers */
