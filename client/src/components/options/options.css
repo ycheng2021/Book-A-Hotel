@@ -1,0 +1,44 @@
+.option-container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    height: 180px;
+}
+
+.options-title {
+    margin: 0;
+    text-align: left;
+    font-family: Helvetica;
+    margin-bottom: 20px;
+}
+
+.options-horizontal {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.options-btn {
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 10px;
+    text-align: left;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 350px;
+}
+
+.each-option {
+    margin: 0;
+    font-size: 20px;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}

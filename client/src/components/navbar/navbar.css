@@ -30,3 +30,92 @@
     width: 40px;
     margin-right: 10px;
 }
+
+.more-btn {
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.moreTravelExpand {
+    position: relative;
+}
+
+.options-container {
+    position: absolute;
+    top: 35px;
+    z-index: 2;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    color: #343b53 !important;
+}
+
+.more-icons {
+    font-size: 20px;
+}
+
+.signup-container {
+    position: relative;
+}
+
+.signup-card {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    z-index: 3;
+    color: #343b53 !important;
+}
+
+.signup-popup {
+    padding: 10px 20px;
+}
+
+.signup-clickable {
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-btn {
+    background-color: #1976d2 !important;
+    color: white !important;
+    text-transform: none !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 16px !important;
+    margin: 10px 20px 0 !important;
+}
+
+.signup-btn {
+    text-transform: none !important;
+    font-weight: 600 !important;
+    color: #1976d2 !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 16px !important;
+    margin: 10px 20px 0 !important;
+}
+
+.signup-hover {
+    width: 100%;
+    cursor: pointer;
+    height: 35px;
+    padding: 10px 20px 0;
+}
+
+.feedback {
+    border-top: 1px solid rgb(196, 196, 216);
+    padding-top: 10px;
+}
+
+/* hovers */
+
+.horizontal:hover,
+.signup-hover:hover {
+    background-color: rgb(233, 233, 248);
+}
