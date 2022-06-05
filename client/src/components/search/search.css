@@ -70,9 +70,85 @@
 .size-choice {
     display: flex; 
     justify-content: flex-end;
+    position: relative;
 }
 
 .setTravelSize {
     position: absolute;
-    top: 0;
+    top: 50px;
+    z-index: 2;
+    text-align: left;
+    padding: 10px;
+    font-family: "Nunito", sans-serif !important;
+    color: #7c7d80 !important;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.tiny-text {
+  font-size: 12px;
+}
+
+.left-column {
+  display: flex;
+  align-items: center;
+}
+
+.travelers {
+  margin: 10px auto;
+  font-size: 20px;
+  color: #343b53;
+}
+
+.room {
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: #525970;
+}
+
+.counterBtn {
+  background-color: transparent !important;
+  border: 1px solid #343b53;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  font-size: 20px;
+  color: #343b53;
+  cursor: pointer;
+}
+
+.guestNum {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.addRoomBtn {
+  text-transform: none !important;
+  color: #1976d2 !important;
+  font-family: "Nunito", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+}
+
+.doneBtn {
+  background-color: #1976d2 !important;
+  color: white !important;
+  width: 100%;
+  height: 45px;
+  margin-top: 30px !important;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }

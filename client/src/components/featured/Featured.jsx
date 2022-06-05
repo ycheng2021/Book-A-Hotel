@@ -3,7 +3,7 @@ import "./featured.css";
 const Featured = () => {
   return (
     <div>
-     <p>Featured</p>
+     <h1>Featured</h1>
     </div>
   );
 }

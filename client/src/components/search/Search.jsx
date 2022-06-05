@@ -33,7 +33,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <Typography component="div">{children}</Typography>
         </Box>
       )}
     </div>
@@ -64,6 +64,20 @@ export default function Search() {
 
   const [openTravel, setOpenTravel] = useState(false);
 
+  const [options, setOptions] = useState({
+    adult: 2,
+    children: 0,
+  });
+
+  const handleOption = (name, operation) => {
+    setOptions((prev) => {
+      return {
+        ...prev,
+        [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
+      };
+    });
+  };
+
   return (
     <div className="activity-container">
       <Box sx={{ width: "100%" }}>
@@ -81,20 +95,61 @@ export default function Search() {
             <Tab label="Cruises" {...a11yProps(5)} />
           </Tabs>
         </Box>
-        <TabPanel value={activity} index={0}>
+        <TabPanel component="div" value={activity} index={0}>
           <div className="flex">
             <div className="size-choice">
-              <span className="travel-btn">
+              <span
+                className="travel-btn"
+                onClick={() => setOpenTravel(!openTravel)}
+              >
                 1 room, 2 travelers{" "}
-                <FontAwesomeIcon
-                  className="downCaret"
-                  icon={faAngleDown}
-                  onClick={() => setOpenTravel(!openTravel)}
-                />
+                <FontAwesomeIcon className="downCaret" icon={faAngleDown} />
               </span>
               {openTravel && (
-                <Card className="setTravelSize" sx={{ minWidth: 275 }}>
-                  <p>Hello</p>
+                <Card className="setTravelSize" sx={{ minWidth: 350 }}>
+                  <h4 className="travelers">Travelers</h4>
+                  <h5 className="room">Room 1</h5>
+                  <div className="space-between">
+                    <h5>Adults</h5>
+                    <div className="traveler-counter">
+                      <button 
+                        disabled={options.adult <=1}
+                        className="counterBtn"
+                        onClick={()=> handleOption("adult", "d")}
+                      >-</button>
+                      <span className="guestNum">{options.adult}</span>
+                      <button 
+                        className="counterBtn"
+                        onClick={()=> handleOption("adult", "i")}
+                      >+</button>
+                    </div>
+                  </div>
+                  <div className="space-between">
+                    <div className="left-column">
+                      <h5>
+                        Children <br></br>
+                        <span className="tiny-text">Ages 0 - 17</span>{" "}
+                      </h5>
+                    </div>
+                    <div className="traveler-counter">
+                      <button 
+                        disabled={options.children <=0}
+                        className="counterBtn"
+                        onClick={()=> handleOption("children", "d")}
+                      >-</button>
+                      <span className="guestNum">{options.children}</span>
+                      <button 
+                        className="counterBtn"
+                        onClick={()=> handleOption("children", "i")}
+                      >+</button>
+                    </div>
+                  </div>
+                  <div className="flex-end">
+                    <Button className="addRoomBtn"> Add another room</Button>
+                  </div>
+                  <div className="center">
+                      <Button className="doneBtn">Done</Button>      
+                  </div>        
                 </Card>
               )}
             </div>

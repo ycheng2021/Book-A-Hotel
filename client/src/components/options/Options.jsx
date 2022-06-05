@@ -3,7 +3,7 @@ import "./options.css";
 const Options = () => {
   return (
     <div>
-     <p>3 rounded cards</p>
+     <h1>3 rounded cards</h1>
     </div>
   );
 }
