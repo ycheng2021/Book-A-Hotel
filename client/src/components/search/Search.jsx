@@ -14,6 +14,10 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import Card from "@mui/material/Card";
+import { useState } from "react";
 import "./search.css";
 
 function TabPanel(props) {
@@ -50,13 +54,15 @@ function a11yProps(index) {
 }
 
 export default function Search() {
-  const [activity, setActivity] = React.useState(0);
+  const [activity, setActivity] = useState(0);
 
-  const [date, setDate] = React.useState([null, null]);
+  const [date, setDate] = useState([null, null]);
 
   const handleChange = (event, newActivity) => {
     setActivity(newActivity);
   };
+
+  const [openTravel, setOpenTravel] = useState(false);
 
   return (
     <div className="activity-container">
@@ -77,6 +83,21 @@ export default function Search() {
         </Box>
         <TabPanel value={activity} index={0}>
           <div className="flex">
+            <div className="size-choice">
+              <span className="travel-btn">
+                1 room, 2 travelers{" "}
+                <FontAwesomeIcon
+                  className="downCaret"
+                  icon={faAngleDown}
+                  onClick={() => setOpenTravel(!openTravel)}
+                />
+              </span>
+              {openTravel && (
+                <Card className="setTravelSize" sx={{ minWidth: 275 }}>
+                  <p>Hello</p>
+                </Card>
+              )}
+            </div>
             <div className="searchInput">
               <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2}>
@@ -92,7 +113,7 @@ export default function Search() {
                       id="outlined-search"
                       placeholder="Going to"
                       type="search"
-                      style ={{width: '100%'}}
+                      style={{ width: "100%" }}
                     />
                   </Grid>
                   <Grid item xs={12} md={6}>
@@ -100,7 +121,7 @@ export default function Search() {
                       <DateRangePicker
                         startText="Check-in"
                         endText="Check-out"
-                        style ={{width: '100%'}}
+                        style={{ width: "100%" }}
                         value={date}
                         onChange={(newDate) => {
                           setDate(newDate);
