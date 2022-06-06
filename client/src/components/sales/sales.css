@@ -6,6 +6,8 @@
   max-width: 1024px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/beach-hero.webp");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 500px;
   font-family: Helvetica;
   text-shadow: 2px 2px #494949;
@@ -31,16 +33,19 @@
     font-size: 36px;
 }
 
-.small-text {
+.sales-small-text {
     font-size: 14px;
     margin-bottom: 10px;
+    line-height: 20px;
 }
 
 .dive-btn {
     background-color: #1976d2 !important;
     color: white !important;
     width: 80px !important;
+    height: 45px !important;
     text-transform: none !important;
+    font-weight: 600 !important;
 }
 
 .dive-btn:hover {

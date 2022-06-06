@@ -199,11 +199,11 @@ export default function Search() {
             </div>
             <div className="transportation-options">
               <FormControlLabel
-                control={<Checkbox defaultChecked />}
+                control={<Checkbox defaultunChecked />}
                 label="Add a flight"
               />
               <FormControlLabel
-                control={<Checkbox defaultChecked />}
+                control={<Checkbox defaultunChecked />}
                 label="Add a car"
               />
             </div>
