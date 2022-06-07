@@ -1,5 +1,6 @@
 .navbar,
-.brandName {
+.brandName,
+.css-1pxkc0u-MuiTypography-root {
     font-family: 'Nunito', sans-serif !important;
 }
 
@@ -119,5 +120,19 @@
 @media only screen and (max-width: 1224px) {
     .hotel-icon {
         margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .css-1pxkc0u-MuiTypography-root {
+        justify-content: flex-end;
+        margin: 0 !important;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .small-brand {
+        letter-spacing: normal !important;
+        font-size: 16px !important;
     }
 }

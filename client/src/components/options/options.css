@@ -2,8 +2,7 @@
   min-width: 320px;
   max-width: 1224px;
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
   height: 180px;
 }
 
@@ -45,11 +44,11 @@
   justify-content: space-between;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 575px) {
   .option-container {
     height: fit-content;
-    margin: 20px auto;
   }
+
   .options-horizontal {
     flex-wrap: wrap;
   }
