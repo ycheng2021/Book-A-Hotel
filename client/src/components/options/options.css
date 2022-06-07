@@ -1,43 +1,59 @@
 .option-container {
-    max-width: 1224px;
-    width: 100%;
-    margin: 0 auto;
-    height: 180px;
+  min-width: 320px;
+  max-width: 1224px;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 180px;
 }
 
 .options-title {
-    margin: 0;
-    text-align: left;
-    font-family: Helvetica;
-    margin: 20px auto;
+  margin: 0;
+  text-align: left;
+  font-family: Helvetica;
+  margin: 20px auto;
 }
 
 .options-horizontal {
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .options-btn {
-    border: 1px solid rgb(223, 223, 223);
-    border-radius: 10px;
-    text-align: left;
-    padding: 5px 10px;
-    cursor: pointer;
-    width: 31%;
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 10px;
+  text-align: left;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 31%;
 }
 
 .each-option {
-    margin: 0;
-    font-size: 20px;
+  margin: 0;
+  font-size: 20px;
 }
 
 .small-text {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .space-between {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 550px) {
+  .option-container {
+    height: fit-content;
+    margin: 20px auto;
+  }
+  .options-horizontal {
+    flex-wrap: wrap;
+  }
+
+  .options-btn {
+    width: 100%;
+  }
 }

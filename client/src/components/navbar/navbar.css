@@ -3,11 +3,6 @@
     font-family: 'Nunito', sans-serif !important;
 }
 
-.css-19r6kue-MuiContainer-root {
-    max-width: 1224px !important;
-    padding: 0 !important;
-}
-
 .css-1t6c9ts {
     justify-content: flex-end;
 }
@@ -39,10 +34,6 @@
 .more-btn {
     font-size: 0.875rem;
     cursor: pointer;
-}
-
-.moreTravelExpand {
-    position: relative;
 }
 
 .options-container {
@@ -123,4 +114,10 @@
 .horizontal:hover,
 .signup-hover:hover {
     background-color: rgb(233, 233, 248);
+}
+
+@media only screen and (max-width: 1224px) {
+    .hotel-icon {
+        margin-left: 10px;
+    }
 }

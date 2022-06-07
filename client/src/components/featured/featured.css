@@ -1,8 +1,10 @@
 .featured-container {
     height: 750px;
+    min-width: 320px;
     max-width: 1224px;
     width: 100%;
-    margin: 20px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .featured-places {

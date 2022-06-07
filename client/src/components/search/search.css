@@ -3,8 +3,9 @@
   border-radius: 10px;
   color: #1976d2;
   margin: 50px auto;
-  width: 100%;
+  min-width: 320px;
   max-width: 1224px;
+  width: 100%;
 }
 
 .searchInput {
@@ -71,19 +72,19 @@
 }
 
 .size-choice {
-    display: flex; 
-    justify-content: flex-end;
-    position: relative;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
 }
 
 .setTravelSize {
-    position: absolute;
-    top: 50px;
-    z-index: 2;
-    text-align: left;
-    padding: 10px;
-    font-family: "Nunito", sans-serif !important;
-    color: #7c7d80 !important;
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+  text-align: left;
+  padding: 10px;
+  font-family: "Nunito", sans-serif !important;
+  color: #7c7d80 !important;
 }
 
 .space-between {
