@@ -15,6 +15,9 @@
 
 .stadium-image {
   border-radius: 10px 0 0 10px;
+  max-width:100%; 
+  width:100%;
+  object-fit: cover;
 }
 
 .right-text {
@@ -84,17 +87,13 @@
   font-size: 14px;
   font-weight: 600;
 }
+
 @media only screen and (max-width: 1050px) {
-  .text-center,
   .phone-container,
   .text-phrase,
-  .disclaimer {
+  .disclaimer,
+  .qrcode-div {
     display: none;
-  }
-
-  .connect-phrase {
-    font-size: 24px;
-    margin-bottom: 5px;
   }
 
   .switchapp-btn {
@@ -107,5 +106,21 @@
     height: 55px !important;
     width: 200px;
     margin-top: 10px !important;
+  }
+
+  .info-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .left-image {
+    height: auto;
+    width: 40%;
+  }
+
+  .right-text {
+    padding: 5px 20px;
   }
 }
