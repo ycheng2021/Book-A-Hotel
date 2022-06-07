@@ -4,8 +4,9 @@ import Footer from "../../components/footer/Footer";
 import Search from "../../components/search/Search";
 import Sales from "../../components/sales/Sales";
 import Options from "../../components/options/Options";
-import Connect from "../../components/connect/Connect"
-import Ads from "../../components/ads/Ads"
+import Connect from "../../components/connect/Connect";
+import Ads from "../../components/ads/Ads";
+import FeaturedAd from "../../components/featuredAd/featuredAd";
 import "./home.css";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
         <Connect />
         <Sales />
         <Options />
+        <FeaturedAd />
         <Featured />
         <Ads />
       </div>

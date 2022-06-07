@@ -3,6 +3,11 @@
     font-family: 'Nunito', sans-serif !important;
 }
 
+.css-19r6kue-MuiContainer-root {
+    max-width: 1224px !important;
+    padding: 0 !important;
+}
+
 .css-1t6c9ts {
     justify-content: flex-end;
 }

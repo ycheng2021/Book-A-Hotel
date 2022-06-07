@@ -72,7 +72,7 @@ const Connect = () => {
               label="Phone Number"
               type="search"
             />
-            <Button className="getapp-btn">Get the app</Button>
+            <Button className="getapp-btn areacode-select">Get the app</Button>
           </div>
           <p className="small-text">
             By providing your number, you agree to receive a one-time automated

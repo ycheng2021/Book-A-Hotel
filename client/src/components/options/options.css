@@ -1,5 +1,5 @@
 .option-container {
-    max-width: 1024px;
+    max-width: 1224px;
     width: 100%;
     margin: 0 auto;
     height: 180px;
@@ -9,15 +9,14 @@
     margin: 0;
     text-align: left;
     font-family: Helvetica;
-    margin-bottom: 20px;
+    margin: 20px auto;
 }
 
 .options-horizontal {
     display: flex;
     flex: 1;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
 }
 
 .options-btn {
@@ -26,7 +25,7 @@
     text-align: left;
     padding: 5px 10px;
     cursor: pointer;
-    width: 350px;
+    width: 31%;
 }
 
 .each-option {
