@@ -1,78 +1,144 @@
 .connect-container {
-    height: 280px;
-    max-width: 1024px;
-    width: 100%;
-    margin: 0 auto;
-    border: 1px solid rgb(223, 223, 223);
-    border-radius: 10px;
+  height: 280px;
+  min-width: 320px;
+  max-width: 1224px;
+  width: 100%;
+  margin: 0;
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 10px;
 }
 
 .left-image {
-    float: left;
+  float: left;
 }
 
 .stadium-image {
-    border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
+  max-width:100%; 
+  width:100%;
+  object-fit: cover;
 }
 
 .right-text {
-    height: 250px;
-    display: flex;
-    padding: 15px 10px 15px 20px;
-    text-align: left;
-    gap: 10px;
+  height: 250px;
+  display: flex;
+  padding: 15px 10px 15px 20px;
+  text-align: left;
+  gap: 30px;
+  margin: 0;
 }
 
 .qrcode-div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .qrcode {
-    width: 150px;
+  width: 150px;
 }
 
 .small-text {
-    font-size: 12px;
-    padding: 0;
-    margin: 0;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
 }
 
 .connect-phrase {
-    margin: 0;
-    font-size: 30px;
+  margin: 0;
+  font-size: 30px;
 }
 
 .text-phrase {
-    margin: 0;
-    font-size: 20px;
-    margin-top: 20px;
+  margin: 0;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 .phone-container {
-    display: flex;
-    flex: 1;
-    padding: 10px 0;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  padding: 10px 0;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .areacode-select {
-    width: 150px;
+  width: 33%;
+}
+
+.switchapp-btn {
+  display: none !important;
 }
 
 .getapp-btn {
-    background-color: #1976d2 !important;
-    color: white !important;
-    text-transform: none !important;
-    font-family: 'Nunito', sans-serif !important;
-    font-size: 16px !important;
-    height: 45px !important;
+  background-color: #1976d2 !important;
+  color: white !important;
+  text-transform: none !important;
+  font-family: "Nunito", sans-serif !important;
+  font-size: 16px !important;
+  height: 55px !important;
+  width: 200px;
 }
 
 .scan-phrase {
-    text-align: center;
-    margin: 0;
-    font-size: 14px;
-    font-weight: 600;
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1050px) {
+  .phone-container,
+  .text-phrase,
+  .disclaimer,
+  .qrcode-div {
+    display: none;
+  }
+
+  .switchapp-btn {
+    display: block !important;
+    background-color: #1976d2 !important;
+    color: white !important;
+    text-transform: none !important;
+    font-family: "Nunito", sans-serif !important;
+    font-size: 16px !important;
+    height: 55px !important;
+    width: 200px;
+    margin-top: 10px !important;
+  }
+
+  .info-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .left-image {
+    height: auto;
+    width: 40%;
+  }
+
+  .right-text {
+    padding: 5px 20px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+    .connect-container {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .left-image {
+        width: 100%;
+    }
+
+    .stadium-image {
+        width: 100%;
+        height: 280px;
+        border-radius: 10px 10px 0 0;
+    }
+
 }

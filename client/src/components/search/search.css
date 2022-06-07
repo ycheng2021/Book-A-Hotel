@@ -3,8 +3,9 @@
   border-radius: 10px;
   color: #1976d2;
   margin: 50px auto;
+  min-width: 320px;
+  max-width: 1204px;
   width: 100%;
-  max-width: 1024px;
 }
 
 .searchInput {
@@ -71,19 +72,19 @@
 }
 
 .size-choice {
-    display: flex; 
-    justify-content: flex-end;
-    position: relative;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
 }
 
 .setTravelSize {
-    position: absolute;
-    top: 50px;
-    z-index: 2;
-    text-align: left;
-    padding: 10px;
-    font-family: "Nunito", sans-serif !important;
-    color: #7c7d80 !important;
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+  text-align: left;
+  padding: 10px;
+  font-family: "Nunito", sans-serif !important;
+  color: #7c7d80 !important;
 }
 
 .space-between {
@@ -154,4 +155,23 @@
 .center {
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 575px) {
+  .activity-container {
+    border: none;
+  }
+
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    padding: 10px !important;
+    min-width: 50px !important;
+  }
+}
+
+@media only screen and (max-width:450px) {
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    padding: 5px !important;
+    min-width: 40px !important;
+    font-size: 11px !important;
+  }
 }

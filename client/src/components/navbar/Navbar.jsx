@@ -149,6 +149,7 @@ const ResponsiveAppBar = () => {
               </Menu>
             </Box>
             <Typography
+              className="small-brand"
               variant="h5"
               noWrap
               component="a"

@@ -3,7 +3,6 @@ import "./featured.css";
 const Featured = () => {
   return (
     <div className="featured-container">
-      <div className="featured-ad"></div>
       <div className="featured-places">
         <span className="featured-place">
           <img
@@ -31,6 +30,28 @@ const Featured = () => {
           ></img>
           <span className="featured-cap">TRAVEL SMARTER</span>
           <span className="featured-bold">Save instantly with rewards</span>
+        </span>
+      </div>
+      <div className="featured-locations">
+        <span className="featured-deal">
+          <img 
+            className="featured-image"
+            src="https://a.travel-assets.com/travel-assets-manager/cmct-5048/CA-HP-Editorial-2up-457x257-No01.jpg"
+            alt="person hiking through rocky terrain"
+          >
+          </img>
+          <span className="featured-cap">GO LONGER WITH MEMBER PRICES</span>
+          <span className="featured-bold">Permission granted to use the long weekend as your excuse</span>
+        </span>
+        <span className="featured-deal">
+        <img 
+            className="featured-image"
+            src="https://a.travel-assets.com/travel-assets-manager/cmct-5276/US-HP-Hero-D-928x398.jpg"
+            alt="person relaxing on a hammock near the forest by the riverbed"
+          >
+          </img>
+          <span className="featured-cap">OFF & AWAY</span>
+          <span className="featured-bold">Chase the fun to someplace special</span>
         </span>
       </div>
     </div>

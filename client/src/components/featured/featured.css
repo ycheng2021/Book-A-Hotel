@@ -1,8 +1,9 @@
 .featured-container {
-    height: 300px;
-    max-width: 1024px;
+    height: 750px;
+    min-width: 320px;
+    max-width: 1224px;
     width: 100%;
-    margin: 0 auto;
+    margin: 20px 0;
 }
 
 .featured-places {
@@ -19,6 +20,7 @@
     cursor: pointer;
     width: 33%;
     overflow: hidden;
+    padding-bottom: 50px;
 }
 
 .featured-image {
@@ -32,4 +34,20 @@
 
 .featured-bold {
     font-weight: 600;
+}
+
+.featured-locations {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    flex: 1;
+}
+
+.featured-deal {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    cursor: pointer;
+    width: 50%;
+    overflow: hidden;
 }
