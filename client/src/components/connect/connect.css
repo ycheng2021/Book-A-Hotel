@@ -1,82 +1,111 @@
 .connect-container {
-    height: 280px;
-    min-width: 320px;
-    max-width: 1224px;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
-    border: 1px solid rgb(223, 223, 223);
-    border-radius: 10px;
+  height: 280px;
+  min-width: 320px;
+  max-width: 1224px;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 10px;
 }
 
 .left-image {
-    float: left;
+  float: left;
 }
 
 .stadium-image {
-    border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
 }
 
 .right-text {
-    height: 250px;
-    display: flex;
-    padding: 15px 10px 15px 20px;
-    text-align: left;
-    gap: 30px;
-    margin: 0;
+  height: 250px;
+  display: flex;
+  padding: 15px 10px 15px 20px;
+  text-align: left;
+  gap: 30px;
+  margin: 0;
 }
 
 .qrcode-div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .qrcode {
-    width: 150px;
+  width: 150px;
 }
 
 .small-text {
-    font-size: 12px;
-    padding: 0;
-    margin: 0;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
 }
 
 .connect-phrase {
-    margin: 0;
-    font-size: 30px;
+  margin: 0;
+  font-size: 30px;
 }
 
 .text-phrase {
-    margin: 0;
-    font-size: 20px;
-    margin-top: 20px;
+  margin: 0;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 .phone-container {
-    display: flex;
-    padding: 10px 0;
-    gap: 10px;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  padding: 10px 0;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .areacode-select {
-    width: 33%;
+  width: 33%;
+}
+
+.switchapp-btn {
+  display: none !important;
 }
 
 .getapp-btn {
-    background-color: #1976d2 !important;
-    color: white !important;
-    text-transform: none !important;
-    font-family: 'Nunito', sans-serif !important;
-    font-size: 16px !important;
-    height: 55px !important;
-    width: 200px;
+  background-color: #1976d2 !important;
+  color: white !important;
+  text-transform: none !important;
+  font-family: "Nunito", sans-serif !important;
+  font-size: 16px !important;
+  height: 55px !important;
+  width: 200px;
 }
 
 .scan-phrase {
-    text-align: center;
-    margin: 0;
-    font-size: 14px;
-    font-weight: 600;
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 1050px) {
+  .text-center,
+  .phone-container,
+  .text-phrase,
+  .disclaimer {
+    display: none;
+  }
+
+  .connect-phrase {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .switchapp-btn {
+    display: block !important;
+    background-color: #1976d2 !important;
+    color: white !important;
+    text-transform: none !important;
+    font-family: "Nunito", sans-serif !important;
+    font-size: 16px !important;
+    height: 55px !important;
+    width: 200px;
+    margin-top: 10px !important;
+  }
 }

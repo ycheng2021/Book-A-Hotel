@@ -74,7 +74,8 @@ const Connect = () => {
             />
             <Button className="getapp-btn areacode-select">Get the app</Button>
           </div>
-          <p className="small-text">
+          <Button className="switchapp-btn">Switch to the app</Button>
+          <p className="small-text disclaimer">
             By providing your number, you agree to receive a one-time automated
             text message with a link to get the app. Standard text message rates
             may apply.
