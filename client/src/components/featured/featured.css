@@ -51,3 +51,9 @@
     width: 50%;
     overflow: hidden;
 }
+
+
+.same-height {
+    height: 300px;
+    object-fit: cover;
+}

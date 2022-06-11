@@ -35,7 +35,7 @@ const Featured = () => {
       <div className="featured-locations">
         <span className="featured-deal">
           <img 
-            className="featured-image"
+            className="featured-image same-height"
             src="https://a.travel-assets.com/travel-assets-manager/cmct-5048/CA-HP-Editorial-2up-457x257-No01.jpg"
             alt="person hiking through rocky terrain"
           >
@@ -45,7 +45,7 @@ const Featured = () => {
         </span>
         <span className="featured-deal">
         <img 
-            className="featured-image"
+            className="featured-image same-height"
             src="https://a.travel-assets.com/travel-assets-manager/cmct-5276/US-HP-Hero-D-928x398.jpg"
             alt="person relaxing on a hammock near the forest by the riverbed"
           >
