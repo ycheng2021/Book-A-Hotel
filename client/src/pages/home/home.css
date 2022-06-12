@@ -19,3 +19,27 @@ body {
     width: 96%;
     margin: 0 2%;
 }
+
+
+.help-btn {
+    font-weight: 600;
+    font-size: 16px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    color: #3662D8;
+    border-radius: 20px;
+    border: 1px solid rgb(231, 231, 231);
+    box-shadow: 1px 1px 1px 1px rgb(231, 231, 231);
+    cursor: pointer;
+}
+
+.help-btn:hover {
+    background-color: aliceblue;
+}
+
+.help-icon {
+    margin-right: 10px
+}

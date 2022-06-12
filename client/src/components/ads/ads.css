@@ -1,0 +1,51 @@
+.ad-container {
+  min-width: 320px;
+  max-width: 1224px;
+  width: 100%;
+}
+
+.top-ad {
+  display: flex;
+  justify-content: center;
+}
+
+.left-right {
+  display: flex;
+  gap: 10px;
+  margin: 40px 0;
+}
+
+.left-ad {
+  width: 100%;
+  position: relative;
+}
+
+.leftadimage {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.ad-label {
+  border-radius: 7px;
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 30px;
+  height: 15px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+
+.ad-box {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
