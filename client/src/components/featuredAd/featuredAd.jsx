@@ -7,7 +7,7 @@ const featuredAds = () => {
       <div className="featuredad-container">
         <div className="img-ad">
           <img className="beachAdImg" src={beach} alt="beach during sunset in pastel colors"></img>
-          <span className="ad-label">Ad</span>
+          <span className="featuredad-label">Ad</span>
         </div>
         <div className="featuredad-desc">
           <img className="hawaii-logo" src={hawaii} alt="hawaii islands logo"></img>

@@ -20,9 +20,9 @@ const Home = () => {
         <Options />
         <FeaturedAd />
         <Featured />
-        <Ads />
+        <Ads /> 
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }
