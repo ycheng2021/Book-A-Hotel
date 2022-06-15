@@ -75,10 +75,10 @@ const ResponsiveAppBar = () => {
               {openMore && (
                 <Card className="options-container" sx={{ width: 250 }}>
                   <div className="logoText">
-                    <div className="horizontal">
+                    <a href="/hotels" className="horizontal">
                       <FontAwesomeIcon className="more-icons" icon={faHotel} />
                       <span>Stays</span>
-                    </div>
+                    </a>
                     <div className="horizontal">
                       <FontAwesomeIcon className="more-icons" icon={faPlane} />
                       <span>Flights</span>

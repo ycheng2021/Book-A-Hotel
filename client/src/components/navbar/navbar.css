@@ -19,6 +19,10 @@
     text-transform: none !important;
 }
 
+.css-19r6kue-MuiContainer-root {
+    max-width: 1246px !important;
+}
+
 .css-103v5ce-MuiTypography-root {
     align-items: center;
 }
@@ -39,7 +43,7 @@
 
 .options-container {
     position: absolute;
-    top: 35px;
+    top: 50px;
     z-index: 2;
 }
 
@@ -53,6 +57,7 @@
     height: 30px;
     align-items: center;
     color: #343b53 !important;
+    text-decoration: none;
 }
 
 .more-icons {
@@ -65,7 +70,7 @@
 
 .signup-card {
     position: absolute;
-    top: 55px;
+    top: 50px;
     right: 0;
     z-index: 3;
     color: #343b53 !important;
