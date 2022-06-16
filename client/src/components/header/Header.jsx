@@ -60,7 +60,7 @@ const Header = () => {
                 <FontAwesomeIcon className="user-icon" icon={faUser}/>
                 <div className="flex-column">
                   <span>Travelers </span>
-                  <span>! room, 2 travelers</span>
+                  <span style={{ fontSize: "16px"}}>1 room, 2 travelers</span>
                 </div>
               </button>
             </Grid>
