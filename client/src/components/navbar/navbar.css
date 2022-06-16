@@ -2,6 +2,7 @@
 .brandName,
 .css-1pxkc0u-MuiTypography-root {
     font-family: 'Nunito', sans-serif !important;
+    background-color: white;
 }
 
 .css-1t6c9ts {
@@ -17,6 +18,10 @@
 .css-1e4e1qc-MuiButtonBase-root-MuiButton-root {
     color: #343b53 !important;
     text-transform: none !important;
+}
+
+.css-19r6kue-MuiContainer-root {
+    max-width: 1246px !important;
 }
 
 .css-103v5ce-MuiTypography-root {
@@ -39,7 +44,7 @@
 
 .options-container {
     position: absolute;
-    top: 35px;
+    top: 50px;
     z-index: 2;
 }
 
@@ -53,6 +58,7 @@
     height: 30px;
     align-items: center;
     color: #343b53 !important;
+    text-decoration: none;
 }
 
 .more-icons {
@@ -65,7 +71,7 @@
 
 .signup-card {
     position: absolute;
-    top: 55px;
+    top: 50px;
     right: 0;
     z-index: 3;
     color: #343b53 !important;

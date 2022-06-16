@@ -1,0 +1,62 @@
+.hotels-container {
+    display: flex;
+    width: 100%;
+    max-width: 1224px;
+    gap: 10px;
+}
+.left-divider {
+    margin: 10px 0;
+    width: 50%;
+}
+
+.right-divider {
+    margin: 10px 0;
+    width: 150%;
+}
+
+.info p {
+    margin: 0;
+}
+
+.flex  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.signup-div {
+    background-color: white;
+    height: 80px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.signup-ad p {
+    margin: 0;
+}
+
+.ticket-icon {
+    background-color: rgb(255, 198, 93);
+    height: 25px;
+    width: 25px;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.signin-link {
+    margin-left: 20px;
+    color: #3662D8;
+}
+
+.signup-link {
+    color: #3662D8;
+}
+
+#demo-select-small {
+    width: 250px;
+}
