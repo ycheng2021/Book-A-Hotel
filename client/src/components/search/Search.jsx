@@ -96,7 +96,7 @@ export default function Search() {
           </Tabs>
         </Box>
         <TabPanel component="div" value={activity} index={0}>
-          <div className="flex">
+          <div className="flexSearch">
             <div className="size-choice">
               <span
                 className="travel-btn"
@@ -112,16 +112,20 @@ export default function Search() {
                   <div className="space-between">
                     <h5>Adults</h5>
                     <div className="traveler-counter">
-                      <button 
-                        disabled={options.adult <=1}
+                      <button
+                        disabled={options.adult <= 1}
                         className="counterBtn"
-                        onClick={()=> handleOption("adult", "d")}
-                      >-</button>
+                        onClick={() => handleOption("adult", "d")}
+                      >
+                        -
+                      </button>
                       <span className="guestNum">{options.adult}</span>
-                      <button 
+                      <button
                         className="counterBtn"
-                        onClick={()=> handleOption("adult", "i")}
-                      >+</button>
+                        onClick={() => handleOption("adult", "i")}
+                      >
+                        +
+                      </button>
                     </div>
                   </div>
                   <div className="space-between">
@@ -132,85 +136,93 @@ export default function Search() {
                       </h5>
                     </div>
                     <div className="traveler-counter">
-                      <button 
-                        disabled={options.children <=0}
+                      <button
+                        disabled={options.children <= 0}
                         className="counterBtn"
-                        onClick={()=> handleOption("children", "d")}
-                      >-</button>
+                        onClick={() => handleOption("children", "d")}
+                      >
+                        -
+                      </button>
                       <span className="guestNum">{options.children}</span>
-                      <button 
+                      <button
                         className="counterBtn"
-                        onClick={()=> handleOption("children", "i")}
-                      >+</button>
+                        onClick={() => handleOption("children", "i")}
+                      >
+                        +
+                      </button>
                     </div>
                   </div>
                   <div className="flex-end">
                     <Button className="addRoomBtn"> Add another room</Button>
                   </div>
                   <div className="center">
-                      <Button 
-                        className="doneBtn"
-                        onClick={() => setOpenTravel(!openTravel)}
-                      >Done</Button>      
-                  </div>        
+                    <Button
+                      className="doneBtn"
+                      onClick={() => setOpenTravel(!openTravel)}
+                    >
+                      Done
+                    </Button>
+                  </div>
                 </Card>
               )}
             </div>
-            <div className="searchInput">
-              <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2}>
-                  <Grid item xs={12} md={6}>
-                    <TextField
-                      InputProps={{
-                        startAdornment: (
-                          <InputAdornment position="start">
-                            <LocationOnIcon />
-                          </InputAdornment>
-                        ),
-                      }}
-                      id="outlined-search"
-                      placeholder="Going to"
-                      type="search"
-                      style={{ width: "100%" }}
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <LocalizationProvider dateAdapter={AdapterDateFns}>
-                      <DateRangePicker
-                        startText="Check-in"
-                        endText="Check-out"
-                        style={{ width: "100%" }}
-                        value={date}
-                        onChange={(newDate) => {
-                          setDate(newDate);
+            <div>
+              <div className="searchInput">
+                <Box sx={{ flexGrow: 1 }}>
+                  <Grid container spacing={2}>
+                    <Grid item xs={12} md={6}>
+                      <TextField
+                        InputProps={{
+                          startAdornment: (
+                            <InputAdornment position="start">
+                              <LocationOnIcon />
+                            </InputAdornment>
+                          ),
                         }}
-                        renderInput={(startProps, endProps) => (
-                          <React.Fragment>
-                            <TextField {...startProps} />
-                            <Box sx={{ mx: 2 }}> to </Box>
-                            <TextField {...endProps} />
-                          </React.Fragment>
-                        )}
+                        id="outlined-search"
+                        placeholder="Going to"
+                        type="search"
+                        style={{ width: "100%" }}
                       />
-                    </LocalizationProvider>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <LocalizationProvider dateAdapter={AdapterDateFns}>
+                        <DateRangePicker
+                          startText="Check-in"
+                          endText="Check-out"
+                          style={{ width: "100%" }}
+                          value={date}
+                          onChange={(newDate) => {
+                            setDate(newDate);
+                          }}
+                          renderInput={(startProps, endProps) => (
+                            <React.Fragment>
+                              <TextField {...startProps} />
+                              <Box sx={{ mx: 2 }}> to </Box>
+                              <TextField {...endProps} />
+                            </React.Fragment>
+                          )}
+                        />
+                      </LocalizationProvider>
+                    </Grid>
                   </Grid>
-                </Grid>
-              </Box>
-            </div>
-            <div className="transportation-options">
-              <FormControlLabel
-                control={<Checkbox defaultunChecked />}
-                label="Add a flight"
-              />
-              <FormControlLabel
-                control={<Checkbox defaultunChecked />}
-                label="Add a car"
-              />
-            </div>
-            <div className="search-center">
-              <Button className="search-btn" variant="contained">
-                Search
-              </Button>
+                </Box>
+              </div>
+              <div className="transportation-options">
+                <FormControlLabel
+                  control={<Checkbox defaultunChecked />}
+                  label="Add a flight"
+                />
+                <FormControlLabel
+                  control={<Checkbox defaultunChecked />}
+                  label="Add a car"
+                />
+              </div>
+              <div className="search-center">
+                <Button className="search-btn" variant="contained">
+                  Search
+                </Button>
+              </div>
             </div>
           </div>
         </TabPanel>

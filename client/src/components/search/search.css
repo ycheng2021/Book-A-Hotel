@@ -76,12 +76,6 @@
   padding-left: 5px;
 }
 
-.size-choice {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-}
-
 .setTravelSize {
   position: absolute;
   top: 50px;
@@ -155,6 +149,17 @@
 .flex-end {
   display: flex;
   justify-content: flex-end;
+}
+
+.flexSearch {
+  display: flex;
+  flex-direction: column;
+}
+
+.size-choice {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
 }
 
 .center {
